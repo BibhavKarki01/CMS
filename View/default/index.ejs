@@ -1,0 +1,169 @@
+<head>
+    <%- include("../partial/head.ejs") %>
+</head>
+
+<body>
+    <%- include("../partial/navbar.ejs") %>
+
+        <div class="container-fluid p-0">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner" style="height: 550px;  background-color: rgb(43, 38, 38); width: 1360px;">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="image/coff3.jpg" height="100%" width="100%" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="image/coff9.jpg" height="100%" width="100%" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/coff.6.jpg" height="100%" width="100%" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+            </div>
+        </div>
+
+        <section id="about">
+            <div class="container bg-dark text-light text-center mt-3">
+                <a href="/about" style="color:white; text-decoration: none;">
+                    <h1>About US! </h1>
+                </a>
+            </div>
+            <div class="about-section wrapper">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-7 col-md-12 mb-lg-0 mb-5 mt-3">
+                            <div class="card border-0">
+                                <img src="image/cof.jpg" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-12 text-sec mt-4">
+                            <h2 class="text-dark">Lorem ipsum dolor sit amet.</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum itaque libero laborum rerum quibusdam repellendus corporis quas commodi necessitatibus iusto. Nobis, velit dolores!</p>
+                            <button class="main-btn mt-4">Learnmore</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container food-type">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5 col-md-12 text-sec mb-lg-0 mt-5">
+                            <h2 class="text-dark">Lorem ipsum dolor sit amet consectetur.</h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum laudantium rem temporibus repudiandae suscipit corrupti quod obcaecati quidem recusandae, cum reprehenderit ut inventore? Numquam assumenda repellat blanditiis
+                                sit facere voluptas unde distinctio laboriosam facilis praesentium deserunt aliquam quo aut vero, adipisci saepe laudantium ab veritatis quae aperiam! Ad eius veritatis minus dolores tenetur quidem asperiores labore earum
+                                doloremque, nam, cum facilis et aperiam.</p>
+                            <!-- <ul class="list-unstyled py-3">
+                            <li>Lorem, ipsum dolor.</li>
+                            <li>Lorem ipsum dolor sit.</li>
+                            <li>Lorem ipsum dolor sit.</li>
+                        </ul> -->
+                            <button class="main-btn mt-4">Learn More</button>
+                        </div>
+                        <div class="col-lg-7 col-md-12">
+                            <div class="card border-0">
+                                <img src="image/coff.jpg" class="img-fluid">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container mt-3">
+            <div class="row text-center bg-dark text-light">
+                <a href="/news" style="color:white; text-decoration: none;">
+                    <h1>Top News!</h1>
+                </a>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+                <% for( let i=0; i < newsdata.length; i++ ) {%>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="image/<%= newsdata[i].image %>" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <%= newsdata[i].title %>
+                                </h5>
+                                <p class="card-text">
+                                    <%= newsdata[i].details %>
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </div>
+                    </div>
+                    <% } %>
+            </div>
+        </div>
+
+
+
+        <div class="container mt-3">
+            <div class="row text-center bg-dark text-light mt-5">
+                <a href="/contact" style="color:white; text-decoration:none; ">
+                    <h1>Contact Us!</h1>
+                </a>
+            </div>
+
+            <div class="row  p-2 d-flex justify-content-center mt-4">
+                <div class="col-6 ">
+                    <div class="form myform bg-secondary p-3" style="border-radius: 10px;">
+                        <form action="/contactdata" method="POST" class="row g-2">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" name="firstname" class="form-control" id="firstname" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="LastName" class="form-label">Last Name</label>
+                                <input type="text" name="lastname" class="form-control" id="lastname" required>
+                            </div>
+                            <div class="col-md-8">
+                                <label for="emailInfo" class="form-label">E-mail</label>
+                                <input type="email" name="email" class="form-control" id="emailInfo" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="phonenumber" class="form-label">Phone Number</label>
+                                <input type="text" class="form-control" name="phonenumber" id="phoneNumber" placeholder="+9779812345321">
+                            </div>
+                            <div class="col-md-12">
+                                <label for="comments" class="form-label">Comments</label>
+                                <textarea class="form-control" name="message" id="comments" rows="3" required></textarea>
+
+                                <div class="col-md-12 mt-2">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <%- include("../partial/footer.ejs") %>
+
+</body>

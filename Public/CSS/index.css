@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.sideBar {
+    background-color: rgb(55, 63, 61);
+    height: 100vh;
+}
+
+.row ul li a {
+    text-decoration: none;
+    text-decoration-style: solid;
+}
+
+.sideBar ul li:hover a {
+    color: rgb(245, 37, 0);
+    border-radius: 3px;
+}
+
+.row h2 {
+    color: white;
+}
+
+.row h3 {
+    text-align: center;
+}
+
+.navright a {
+    border-radius: 20px;
+}
+
+.navright a:hover {
+    background-color: black;
+}

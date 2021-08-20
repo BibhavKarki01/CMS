@@ -1,0 +1,46 @@
+<head>
+    <%- include("../partial/head.ejs") %>
+</head>
+
+<body>
+    <%- include("../partial/navbar.ejs") %>
+        <div class="container mt-3  ">
+            <a class="Cone" href="/contact">
+                <h1>Contact Us!</h1>
+            </a>
+            <div class="row  p-2 d-flex justify-content-center">
+                <div class="col-6 ">
+                    <div class="form myform bg-secondary p-3" style="border-radius: 10px;">
+                        <form class="row g-2">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstname" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="LastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastname" required>
+                            </div>
+                            <div class="col-md-8">
+                                <label for="emailInfo" class="form-label">E-mail</label>
+                                <input type="email" class="form-control" id="emailInfo" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="phonenumber" class="form-label">Phone Number</label>
+                                <input type="text" class="form-control" id="phoneNumber" placeholder="+9779812345321">
+                            </div>
+                            <div class="col-md-12">
+                                <label for="comments" class="form-label">Comments</label>
+                                <textarea class="form-control" id="comments" rows="3" required></textarea>
+
+                                <div class="col-md-12 mt-2">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <%- include("../partial/footer.ejs") %>
+</body>

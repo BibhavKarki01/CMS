@@ -1,0 +1,35 @@
+<head>
+    <%- include("../partial/head.ejs") %>
+</head>
+
+<body>
+    <%- include("../partial/navbar.ejs") %>
+        <div class="container mt-3">
+            <a class="None" href="/news.html">
+                <h1>Top News!</h1>
+            </a>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <% for( let i=0; i < newsdata.length; i++ ) {%>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="image/<%= newsdata[i].image %>" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <%= newsdata[i].title %>
+                                </h5>
+                                <p class="card-text">
+                                    <%= newsdata[i].details %>
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </div>
+                    </div>
+                    <% } %>
+            </div>
+
+        </div>
+        <%- include("../partial/footer.ejs") %>
+</body>
